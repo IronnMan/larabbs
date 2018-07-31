@@ -45,6 +45,8 @@ $api->version('v1', [
                 ->name('api.topics.stroe');
             $api->patch('topics/{topic}', 'TopicsController@update')
                 ->name('api.topics.update');
+            $api->delete('topics/{topic}', 'TopicsController@destroy')
+                ->name('api.topics.destroy');
         });
 
         // 短信验证码
